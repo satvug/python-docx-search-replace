@@ -586,6 +586,8 @@ class dxsr:
        doc.search_replace(re.compile(".cow."), "cat") <-- searches for regex ".cow.", replace with "cat"
     """
     def search_replace(self, patterns, replacement, max_replacements=0):
+		# TODO: fix problem that occurs when multiple matches within same object is found - that
+		# can mess things up because position in the object is bad after first replacement in the object is done.
         patterns     = dxsr.make_patterns(patterns)
         replace_func = dxsr.to_replacement_func(replacement)
         matches      = self.search_paragraphs(patterns)
