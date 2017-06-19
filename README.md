@@ -52,6 +52,7 @@ doc.save_docx("test-modified.docx")
 ## Bug
 There is currently a case that is not handled properly and needs to be fixed.
 The bug only occurs when you're replacing matches that are somewhat close to each other (that is, they're inside the same w:t object).
+I would only worry about this bug if you're replacing patterns that occur very often close by each other.
 
 
 
