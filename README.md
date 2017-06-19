@@ -26,7 +26,7 @@ doc.replace_all(matches, dxsr.replace_func_swapcase)
 
 # Simpler form of search-replacement
 doc.search_replace(re.compile(".cow."), "cat") # search using regex ".cow.", replace with "cat"
-doc.search_replace(re.compile(".bee.", "dog") # replace raw string ".bee." with "dog"
+doc.search_replace(".bee.", "dog") # replace raw string ".bee." with "dog"
 
 # Advanced: using our own replacement function
 # If the match starts with 'a', replace match to "hello", otherwise "bye"
